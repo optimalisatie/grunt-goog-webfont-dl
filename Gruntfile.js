@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         clean: {
             tmp: ['tmp/*'],
         },
-// Configuration to be run (and then tested).
+// Configuration to be run.
         'goog-webfont-dl': {
             test: {
                 options: {
