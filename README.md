@@ -36,9 +36,7 @@ Task targets, files and options may be specified according to the grunt [Configu
 Use the `grunt-goog-webfont-dl` task by specifying a target destination (file) for your font-CSS, the name of the [Google Font](https://www.google.com/fonts/) and the font-styles.
 Below this is `dist/ubuntu.css` for the [Ubuntu](https://www.google.com/fonts/specimen/Ubuntu) font.
 
-Along-side, specify the font file-types you want to download. Not all font file-types are supported in every browser. 
-
-Check compatibility: [TTF](http://caniuse.com/#feat=ttf), [EOT](http://caniuse.com/#search=eot), [WOFF](http://caniuse.com/#search=woff), [SVG](http://caniuse.com/#search=svg) 
+Along-side, specify the font file-types you want to download. Not all font file-types are supported in every browser. Check compatibility: [TTF](http://caniuse.com/#feat=ttf), [EOT](http://caniuse.com/#search=eot), [WOFF](http://caniuse.com/#search=woff), [SVG](http://caniuse.com/#search=svg) 
 
 ```js
 goog-webfont-dl: {
@@ -55,7 +53,7 @@ goog-webfont-dl: {
       }
   }
 }
-`
+```
 
 ## Maintainers
 
