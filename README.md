@@ -1,7 +1,7 @@
 grunt-goog-webfont-dl
 =====================
 
-A grunt wrapper for Google WebFont Downloader ([goog-webfont-dl](https://github.com/jrnewell/goog-webfont-dl)) from [James Newell](https://github.com/jrnewell).
+A grunt wrapper for Google WebFont Downloader ([goog-webfont-dl](https://github.com/jrnewell/goog-webfont-dl)) by [James Newell](https://github.com/jrnewell).
 
 > [goog-webfont-dl](https://github.com/jrnewell/goog-webfont-dl) is a Google WebFont utility to download webfont files to your local machine. It attempts to retreieve WOFF, TTF, EOT, and SVG file formats using custom user-agent strings. It will then output a CSS3 snippet that you can use directly in your project.
 
@@ -39,7 +39,7 @@ Below this is `dist/ubuntu.css` for the [Ubuntu](https://www.google.com/fonts/sp
 Along-side, specify the font file-types you want to download. Not all font file-types are supported in every browser. Check compatibility: [TTF](http://caniuse.com/#feat=ttf), [EOT](http://caniuse.com/#search=eot), [WOFF](http://caniuse.com/#search=woff), [SVG](http://caniuse.com/#search=svg) 
 
 ```js
-goog-webfont-dl: {
+"goog-webfont-dl": {
   ubuntu: {
       options: {
           ttf: true,
