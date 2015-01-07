@@ -105,7 +105,7 @@ module.exports = function(grunt) {
         grunt.log.write('Start download of Google WebFont sourcefiles...');
 
         grunt.util.spawn({
-            cmd: 'node_modules/goog-webfont-dl/index.js',
+            cmd: 'node_modules/grunt-goog-webfont-dl/node_modules/goog-webfont-dl/index.js',
             args: args
         }, function(err, result, code) {
 
