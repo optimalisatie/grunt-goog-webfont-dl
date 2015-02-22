@@ -30,22 +30,22 @@ module.exports = function(grunt) {
             cssprefix: ''
         });
 
-        if(options.fontname === '' || !_.isString(options.fontname)) {
+        if (options.fontname === '' || !_.isString(options.fontname)) {
             grunt.fail.warn('Invalid Google font-name.');
             return;
         }
 
-        if(options.fontstyles !== '' && !_.isString(options.fontstyles)) {
+        if (options.fontstyles !== '' && !_.isString(options.fontstyles)) {
             grunt.fail.warn('Invalid Google font-styles.');
             return;
         }
 
-        if(options.cssdest === '' || !_.isString(options.cssdest)) {
+        if (options.cssdest === '' || !_.isString(options.cssdest)) {
             grunt.fail.warn('Invalid CSS file destination.');
             return;
         }
 
-        if(options.cssprefix !== '' && !_.isString(options.cssprefix)) {
+        if (options.cssprefix !== '' && !_.isString(options.cssprefix)) {
             grunt.fail.warn('Invalid CSS prefix.');
             return;
         }
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
         var args = [];
         var all = true;
         var types = [];
-        _.each(['ttf','eot','woff','svg'],function(value, key) {
+        _.each(['ttf','eot','woff','svg'], function(value, key) {
             if (options[value] === false) {
                 all = false;
             } else {
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
         if (all) {
             args.push('--all');
         } else {
-            _.each(types,function(value, key) {
+            _.each(types, function(value, key) {
                 switch(value) {
                     default:
                         args.push('--'+value);
@@ -77,27 +77,27 @@ module.exports = function(grunt) {
         // Loop through the options and add them to args
         // Omit urls from the options to be passed through
         _.each(options, function(value, key) {
-            switch(key) {
+            switch (key) {
                 case "fontname":
                     args.push('--font');
                     args.push(value);
-                break;
+                    break;
                 case "fontstyles":
                     if (value !== '') {
                         args.push('--styles');
                         args.push(value);
                     }
-                break;
+                    break;
                 case "cssdest":
                     args.push('--out');
                     args.push(value);
-                break;
+                    break;
                 case "cssprefix":
                     if (value !== '') {
                         args.push('--prefix');
                         args.push(value);
                     }
-                break;
+                    break;
             }
         });
 
