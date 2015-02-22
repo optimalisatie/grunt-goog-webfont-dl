@@ -56,10 +56,10 @@ module.exports = function(grunt) {
         var all = true;
         var types = [];
         _.each(['ttf','eot','woff','svg'],function(value, key) {
-            if (options[key] === false) {
+            if (options[value] === false) {
                 all = false;
             } else {
-                types.push(key);
+                types.push(value);
             }
         });
         if (all) {
