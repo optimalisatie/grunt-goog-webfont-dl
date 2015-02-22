@@ -10,32 +10,32 @@
 
 module.exports = function(grunt) {
 
-	// Please see the Grunt documentation for more information regarding task
-	// creation: http://gruntjs.com/creating-tasks
+    // Please see the Grunt documentation for more information regarding task
+    // creation: http://gruntjs.com/creating-tasks
 
     var _ = require('lodash');
     var path = require('path');
 
-	grunt.registerMultiTask('goog-webfont-dl', 'Grunt wrapper for goog-webfont-dl (Google WebFont Downloader)', function() {
-		var done = this.async();
-		// Merge task-specific and/or target-specific options with these defaults.
-		var options = this.options({
-			ttf: true,
-			eot: true,
-			woff: true,
-			svg: true,
-			fontname: '',
-			fontstyles: '',
+    grunt.registerMultiTask('goog-webfont-dl', 'Grunt wrapper for goog-webfont-dl (Google WebFont Downloader)', function() {
+        var done = this.async();
+        // Merge task-specific and/or target-specific options with these defaults.
+        var options = this.options({
+            ttf: true,
+            eot: true,
+            woff: true,
+            svg: true,
+            fontname: '',
+            fontstyles: '',
             cssdest: '',
-			cssprefix: ''
-		});
+            cssprefix: ''
+        });
 
-		if(options.fontname === '' || !_.isString(options.fontname)) {
+        if(options.fontname === '' || !_.isString(options.fontname)) {
             grunt.fail.warn('Invalid Google font-name.');
             return;
         }
 
-		if(options.fontstyles !== '' && !_.isString(options.fontstyles)) {
+        if(options.fontstyles !== '' && !_.isString(options.fontstyles)) {
             grunt.fail.warn('Invalid Google font-styles.');
             return;
         }
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
             return;
         }
 
-		if(options.cssprefix !== '' && !_.isString(options.cssprefix)) {
+        if(options.cssprefix !== '' && !_.isString(options.cssprefix)) {
             grunt.fail.warn('Invalid CSS prefix.');
             return;
         }
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 
         // Loop through the options and add them to args
         // Omit urls from the options to be passed through
-		_.each(options, function(value, key) {
+        _.each(options, function(value, key) {
             switch(key) {
                 case "fontname":
                     args.push('--font');
@@ -123,6 +123,6 @@ module.exports = function(grunt) {
             done();
         });
 
-	});
+    });
 
 };
