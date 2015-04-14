@@ -58,6 +58,10 @@ Along-side, specify the font file-types you want to download. Not all font file-
 ## Maintainers
 
 * [@optimalisatie](https://github.com/optimalisatie)
+ 
+## Contributors
+
+* [@michael-k](https://github.com/michael-k)
 
 ## License
 
