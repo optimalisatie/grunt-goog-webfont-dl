@@ -48,7 +48,7 @@ module.exports = function(grunt) {
             return;
         }
 
-        if (options.cssdest === '' || !_.isString(options.cssdest)) {
+        if (options.cssdest !== '' && !_.isString(options.cssdest)) {
             grunt.fail.warn('Invalid CSS file destination.');
             return;
         }
@@ -108,8 +108,10 @@ module.exports = function(grunt) {
                     }
                     break;
                 case "cssdest":
-                    args.push('--out');
-                    args.push(value);
+                    if (value !== '') {
+                        args.push('--out');
+                        args.push(value);
+                    }
                     break;
                 case "cssprefix":
                     if (value !== '') {
