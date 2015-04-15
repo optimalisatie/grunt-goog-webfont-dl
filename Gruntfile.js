@@ -33,11 +33,14 @@ module.exports = function(grunt) {
                     ttf: true,
                     eot: true,
                     woff: true,
+                    woff2: true,
                     svg: true,
                     fontname: 'Ubuntu',
                     fontstyles: '300,500,700',
+                    fontdest: '',
                     cssdest: 'tmp/ubuntu.css',
-                    cssprefix: ''
+                    cssprefix: '',
+                    subset: ''
                 }
             }
         }

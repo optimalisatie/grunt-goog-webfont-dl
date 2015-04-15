@@ -1,7 +1,7 @@
 {
   "name": "grunt-goog-webfont-dl",
   "description": "Grunt wrapper for goog-webfont-dl",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "homepage": "https://github.com/optimalisatie/grunt-goog-webfont-dl",
   "author": {
     "name": "Jan Jaap Hakvoort",
@@ -18,7 +18,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/filamentgroup/grunt-criticalcss/blob/master/LICENSE-MIT"
+      "url": "https://github.com/optimalisatie/grunt-goog-webfont-dl/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
@@ -29,13 +29,13 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "goog-webfont-dl": "0.0.4",
-    "lodash": "^2.4.1"
+    "goog-webfont-dl": "0.1.1",
+    "lodash": "^3.6.0"
   },
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-jshint": "~0.6.0"
+    "grunt-contrib-jshint": "~0.11.1"
   },
   "peerDependencies": {
     "grunt": "*"
