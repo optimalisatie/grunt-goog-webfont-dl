@@ -37,6 +37,7 @@ module.exports = function(grunt) {
                     svg: true,
                     fontname: 'Ubuntu',
                     fontstyles: '300,500,700',
+                    fontdest: '',
                     cssdest: 'tmp/ubuntu.css',
                     cssprefix: '',
                     subset: ''

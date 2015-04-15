@@ -49,6 +49,7 @@ Along-side, specify the font file-types you want to download. Not all font file-
           svg: true,
           fontname: 'Ubuntu',
           fontstyles: '300,500,700',
+          fontdest: '',
           cssdest: 'dist/ubuntu.css',
           cssprefix: '',
           subset: ''

@@ -27,6 +27,7 @@ module.exports = function(grunt) {
             svg: true,
             fontname: '',
             fontstyles: '',
+            fontdest: '',
             cssdest: '',
             cssprefix: '',
             subset: ''
@@ -39,6 +40,11 @@ module.exports = function(grunt) {
 
         if (options.fontstyles !== '' && !_.isString(options.fontstyles)) {
             grunt.fail.warn('Invalid Google font-styles.');
+            return;
+        }
+
+        if (options.fontdest !== '' && !_.isString(options.fontdest)) {
+            grunt.fail.warn('Invalid font files destination.');
             return;
         }
 
@@ -92,6 +98,12 @@ module.exports = function(grunt) {
                 case "fontstyles":
                     if (value !== '') {
                         args.push('--styles');
+                        args.push(value);
+                    }
+                    break;
+                case "fontdest":
+                    if (value !== '') {
+                        args.push('--destination');
                         args.push(value);
                     }
                     break;
