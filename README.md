@@ -3,7 +3,7 @@ grunt-goog-webfont-dl [![Dependency Status](https://david-dm.org/optimalisatie/g
 
 A grunt wrapper for Google WebFont Downloader ([goog-webfont-dl](https://github.com/jrnewell/goog-webfont-dl)) by [James Newell](https://github.com/jrnewell).
 
-> [goog-webfont-dl](https://github.com/jrnewell/goog-webfont-dl) is a Google WebFont utility to download webfont files to your local machine. It attempts to retreieve WOFF, TTF, EOT, and SVG file formats using custom user-agent strings. It will then output a CSS3 snippet that you can use directly in your project.
+> [goog-webfont-dl](https://github.com/jrnewell/goog-webfont-dl) is a Google WebFont utility to download webfont files to your local machine. It attempts to retreieve WOFF, WOFF2, TTF, EOT, and SVG file formats using custom user-agent strings. It will then output a CSS3 snippet that you can use directly in your project.
 
 ## Getting Started
 
@@ -36,7 +36,7 @@ Task targets, files and options may be specified according to the grunt [Configu
 Use the `grunt-goog-webfont-dl` task by specifying a target destination (file) for your font-CSS, the name of the [Google Font](https://www.google.com/fonts/) and the font-styles.
 Below this is `dist/ubuntu.css` for the [Ubuntu](https://www.google.com/fonts/specimen/Ubuntu) font.
 
-Along-side, specify the font file-types you want to download. Not all font file-types are supported in every browser. Check compatibility: [TTF](http://caniuse.com/#feat=ttf), [EOT](http://caniuse.com/#search=eot), [WOFF](http://caniuse.com/#search=woff), [SVG](http://caniuse.com/#search=svg) 
+Along-side, specify the font file-types you want to download. Not all font file-types are supported in every browser. Check compatibility: [TTF](http://caniuse.com/#feat=ttf), [EOT](http://caniuse.com/#search=eot), [WOFF](http://caniuse.com/#search=woff), [WOFF2](http://caniuse.com/#search=woff2), [SVG](http://caniuse.com/#search=svg)
 
 ```js
 "goog-webfont-dl": {
@@ -45,6 +45,7 @@ Along-side, specify the font file-types you want to download. Not all font file-
           ttf: true,
           eot: true,
           woff: true,
+          woff2: true,
           svg: true,
           fontname: 'Ubuntu',
           fontstyles: '300,500,700',
@@ -58,7 +59,7 @@ Along-side, specify the font file-types you want to download. Not all font file-
 ## Maintainers
 
 * [@optimalisatie](https://github.com/optimalisatie)
- 
+
 ## Contributors
 
 * [@michael-k](https://github.com/michael-k)

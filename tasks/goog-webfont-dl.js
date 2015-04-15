@@ -23,6 +23,7 @@ module.exports = function(grunt) {
             ttf: true,
             eot: true,
             woff: true,
+            woff2: true,
             svg: true,
             fontname: '',
             fontstyles: '',
@@ -55,7 +56,7 @@ module.exports = function(grunt) {
         var args = [];
         var all = true;
         var types = [];
-        _.each(['ttf','eot','woff','svg'], function(value, key) {
+        _.each(['ttf','eot','woff','woff2','svg'], function(value, key) {
             if (options[value] === false) {
                 all = false;
             } else {
