@@ -1,4 +1,4 @@
-grunt-goog-webfont-dl
+grunt-goog-webfont-dl [![Dependency Status](https://david-dm.org/optimalisatie/grunt-goog-webfont-dl.svg)](https://david-dm.org/optimalisatie/grunt-goog-webfont-dl)
 =====================
 
 A grunt wrapper for Google WebFont Downloader ([goog-webfont-dl](https://github.com/jrnewell/goog-webfont-dl)) by [James Newell](https://github.com/jrnewell).
