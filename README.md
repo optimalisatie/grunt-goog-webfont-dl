@@ -65,4 +65,4 @@ Along-side, specify the font file-types you want to download. Not all font file-
 
 ## License
 
-(C) [www.optimalisatie.nl](https://optimalisatie.nl) 2014, released under the MIT license
+(C) [www.optimalisatie.nl](https://optimalisatie.nl) 2014–2015, released under the MIT license
