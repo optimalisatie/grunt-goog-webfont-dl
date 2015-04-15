@@ -29,8 +29,8 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "goog-webfont-dl": "0.0.4",
-    "lodash": "^2.4.1"
+    "goog-webfont-dl": "0.1.1",
+    "lodash": "^3.6.0"
   },
   "devDependencies": {
     "grunt": "*",
