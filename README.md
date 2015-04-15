@@ -50,7 +50,8 @@ Along-side, specify the font file-types you want to download. Not all font file-
           fontname: 'Ubuntu',
           fontstyles: '300,500,700',
           cssdest: 'dist/ubuntu.css',
-          cssprefix: ''
+          cssprefix: '',
+          subset: ''
       }
   }
 }

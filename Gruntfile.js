@@ -38,7 +38,8 @@ module.exports = function(grunt) {
                     fontname: 'Ubuntu',
                     fontstyles: '300,500,700',
                     cssdest: 'tmp/ubuntu.css',
-                    cssprefix: ''
+                    cssprefix: '',
+                    subset: ''
                 }
             }
         }

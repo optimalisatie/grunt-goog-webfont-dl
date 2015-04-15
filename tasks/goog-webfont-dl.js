@@ -28,7 +28,8 @@ module.exports = function(grunt) {
             fontname: '',
             fontstyles: '',
             cssdest: '',
-            cssprefix: ''
+            cssprefix: '',
+            subset: ''
         });
 
         if (options.fontname === '' || !_.isString(options.fontname)) {
@@ -48,6 +49,11 @@ module.exports = function(grunt) {
 
         if (options.cssprefix !== '' && !_.isString(options.cssprefix)) {
             grunt.fail.warn('Invalid CSS prefix.');
+            return;
+        }
+
+        if (options.subset !== '' && !_.isString(options.subset)) {
+            grunt.fail.warn('Invalid character subset.');
             return;
         }
 
@@ -96,6 +102,12 @@ module.exports = function(grunt) {
                 case "cssprefix":
                     if (value !== '') {
                         args.push('--prefix');
+                        args.push(value);
+                    }
+                    break;
+                case "subset":
+                    if (value !== '') {
+                        args.push('--subset');
                         args.push(value);
                     }
                     break;
