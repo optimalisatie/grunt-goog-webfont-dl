@@ -33,33 +33,8 @@ module.exports = function(grunt) {
             subset: ''
         });
 
-        if (options.fontname === '' || !_.isString(options.fontname)) {
-            grunt.fail.warn('Invalid Google font-name.');
-            return;
-        }
-
-        if (options.fontstyles !== '' && !_.isString(options.fontstyles)) {
-            grunt.fail.warn('Invalid Google font-styles.');
-            return;
-        }
-
-        if (options.fontdest !== '' && !_.isString(options.fontdest)) {
-            grunt.fail.warn('Invalid font files destination.');
-            return;
-        }
-
-        if (options.cssdest !== '' && !_.isString(options.cssdest)) {
-            grunt.fail.warn('Invalid CSS file destination.');
-            return;
-        }
-
-        if (options.cssprefix !== '' && !_.isString(options.cssprefix)) {
-            grunt.fail.warn('Invalid CSS prefix.');
-            return;
-        }
-
-        if (options.subset !== '' && !_.isString(options.subset)) {
-            grunt.fail.warn('Invalid character subset.');
+        if (options.fontname === '') {
+            grunt.fail.warn('Fontname must not be empty.');
             return;
         }
 
@@ -90,40 +65,51 @@ module.exports = function(grunt) {
         // Loop through the options and add them to args
         // Omit urls from the options to be passed through
         _.each(options, function(value, key) {
+            if (value === '') {
+                return;
+            }
             switch (key) {
                 case "fontname":
+                    if (!_.isString(value)) {
+                        grunt.fail.warn('Invalid Google font-name.');
+                    }
                     args.push('--font');
                     args.push(value);
                     break;
                 case "fontstyles":
-                    if (value !== '') {
-                        args.push('--styles');
-                        args.push(value);
+                    if (!_.isString(value)) {
+                        grunt.fail.warn('Invalid Google font-styles.');
                     }
+                    args.push('--styles');
+                    args.push(value);
                     break;
                 case "fontdest":
-                    if (value !== '') {
-                        args.push('--destination');
-                        args.push(value);
+                    if (!_.isString(value)) {
+                        grunt.fail.warn('Invalid font files destination.');
                     }
+                    args.push('--destination');
+                    args.push(value);
                     break;
                 case "cssdest":
-                    if (value !== '') {
-                        args.push('--out');
-                        args.push(value);
+                    if (!_.isString(value)) {
+                        grunt.fail.warn('Invalid CSS file destination.');
                     }
+                    args.push('--out');
+                    args.push(value);
                     break;
                 case "cssprefix":
-                    if (value !== '') {
-                        args.push('--prefix');
-                        args.push(value);
+                    if (!_.isString(value)) {
+                        grunt.fail.warn('Invalid CSS prefix.');
                     }
+                    args.push('--prefix');
+                    args.push(value);
                     break;
                 case "subset":
-                    if (value !== '') {
-                        args.push('--subset');
-                        args.push(value);
+                    if (!_.isString(value)) {
+                        grunt.fail.warn('Invalid character subset.');
                     }
+                    args.push('--subset');
+                    args.push(value);
                     break;
             }
         });
