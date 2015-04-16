@@ -8,6 +8,10 @@
     "email": "info@optimalisatie.nl",
     "url": "https://optimalisatie.nl"
   },
+  "contributors": [{
+    "name": "Michael",
+    "url": "https://github.com/michael-k"
+  }],
   "repository": {
     "type": "git",
     "url": "https://github.com/optimalisatie/grunt-goog-webfont-dl.git"
