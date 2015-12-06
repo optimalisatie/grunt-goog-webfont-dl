@@ -65,6 +65,7 @@ Along-side, specify the font file-types you want to download. Not all font file-
 ## Contributors
 
 * [@michael-k](https://github.com/michael-k)
+* [@yohannp](https://github.com/yohannp)
 
 ## License
 
